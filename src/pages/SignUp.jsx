@@ -6,7 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 function Signup() {
   const navigate = useNavigate();
   const { isPending, error, response, handlePost } = usePost(
-    "http://localhost:3002/user/signup"
+    "http://localhost:5000/user/signup"
   );
   const [formDetail, setFormDetail] = useState({
     firstname: "",

@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 function Login() {
   const navigate = useNavigate();
   const { isPending, error, response, handlePost } = usePost(
-    "http://localhost:3002/user/login"
+    "http://localhost:5000/user/login"
   );
 
   const [formDetail, setFormDetail] = useState([

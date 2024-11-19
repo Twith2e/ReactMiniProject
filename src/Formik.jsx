@@ -28,7 +28,7 @@ function Formik() {
       try {
         const data = await axios.post("http://localhost:8000/users", values);
         if (data) {
-          toast.success("registration successful");
+          toast.success(data.data.message);
         } else {
           throw new Error("not a success");
         }

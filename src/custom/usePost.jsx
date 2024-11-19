@@ -14,6 +14,11 @@ function usePost(url) {
 
       // Assuming a successful request
       if (response.status === 200 || response.status === 201) {
+        if (response.data.token) {
+          localStorage.setItem("token", response.data.token);
+        } else {
+          console.log("no token");
+        }
         console.log(response.data);
         setResponseData(response.data.message || response.data); // Use message if available
       } else {

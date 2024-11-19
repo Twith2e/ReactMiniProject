@@ -11,16 +11,12 @@ function Input({ setIsClicked, isClicked }) {
   const [isReponse, setIsResponse] = useState(false);
 
   const { isPending, error, response, handlePost } = usePost(
-    "http://localhost:3002/todo/add"
+    "http://localhost:5000/todo/add"
   );
 
   function handleAdd() {
     setIsClicked(true);
   }
-
-  useEffect(() => {
-    handlePost(tasks);
-  }, [isClicked]);
 
   useEffect(() => {
     if (error) {
